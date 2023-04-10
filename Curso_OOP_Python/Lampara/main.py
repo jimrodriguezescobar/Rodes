@@ -20,33 +20,33 @@ class Lampara:
     def __init__(self, esta_encendida):
         self.esta_encendida = esta_encendida
 
-    def encender(self):
-        self.esta_encendida = True
-        self.muestra_lampara()
-
-    def apagar(self):
-        self.esta_encendida = False
-        self.muestra_lampara()
-
     def muestra_lampara(self):
         if self.esta_encendida:
             print(self.Estados[0])
         else:
             print(self.Estados[1])
 
+    def encender(self):
+        self.esta_encendida = True
+        self.muestra_lampara()
+
+    def apagar(self):
+        self.esta_encendida = False
+        self.muestra_lampara()      
+
 
 def main(): 
   lamp = Lampara(esta_encendida=False)
-  menu = '''Menu:
+  menu = '''MENU:
   0 > Apagar Lampara
   1 > Encender lampara
   x > Salir'''
   while True:
     print(menu)
-    op=input("Que opcion desea: ")
-    if op=='0':
+    opcion=input("Que opcion desea: ")
+    if opcion=='0':
       lamp.apagar()
-    elif op=='1':
+    elif opcion=='1':
       lamp.encender()
     else:
       break

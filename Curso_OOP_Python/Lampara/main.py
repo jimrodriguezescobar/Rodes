@@ -1,5 +1,5 @@
 class Lampara:
-    _ESTADOS = ['''
+    Estados = ['''
           .
      .    |    ,
       \   '   /
@@ -30,9 +30,9 @@ class Lampara:
 
     def muestra_lampara(self):
         if self.esta_encendida:
-            print(self._ESTADOS[0])
+            print(self.Estados[0])
         else:
-            print(self._ESTADOS[1])
+            print(self.Estados[1])
 
 
 def main(): 
